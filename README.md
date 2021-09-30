@@ -6,25 +6,25 @@ TinyApp is a full stack web application that allows users to shorten long URLs (
 
 *Main page without an active user*
 
-!["Screenshot of URLs page with no user logged in"]()
+!["Screenshot of URLs page with no user logged in"](https://github.com/yavuzinc/tinyapp/blob/master/images/mainpage.png)
 
-*Main page with an active user, displaying created links*
+*Main page with an active user*
 
-!["Screenshot of URLs page with user logged in"]()
+!["Screenshot of URLs page with user logged in"](https://github.com/yavuzinc/tinyapp/blob/master/images/user_logged_in.png)
+
+*Edit Url*
+
+!["Screenshot of register page"](https://github.com/yavuzinc/tinyapp/blob/master/images/inside_url.png)
 
 *Registration page*
 
-!["Screenshot of register page"]()
+!["Screenshot of register page"](https://github.com/yavuzinc/tinyapp/blob/master/images/create_acc.png)
 
-*Specific short URL page where user owns the short URL*
+*Create URL*
 
-!["Screenshot of URLs page with user logged in"]()
+!["Screenshot of createURL"](https://github.com/yavuzinc/tinyapp/blob/master/images/create_url.png)
 
-*Specific short URL page when there is no active user*
 
-!["Screenshot of URLs page with user logged in"]()
-
-*For a more in depth look at TinyApp, and to create your own short links, I encourage you to give it a try!*
 
 
 ## Dependencies
