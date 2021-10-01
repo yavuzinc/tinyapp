@@ -1,6 +1,6 @@
 {
   "name": "tinyapp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "TinyApp is a full stack web application that allows users to shorten long URLs (similar to bit.ly). TinyApp is built with Node and Express.",
   "main": "express_server.js",
   "directories": {
