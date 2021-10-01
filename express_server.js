@@ -91,7 +91,7 @@ app.get("/urls/:shortURL", (req, res) => {
     res
       .status(404)
       .send(
-        "ERORRRORR!"
+        "The short URL you entered does not correspond with a long URL at this time!"
       );
   }
 });
@@ -108,7 +108,7 @@ app.get("/u/:shortURL", (req, res) => {
     res
       .status(404)
       .send(
-        "EROOR!"
+        "The short URL you are trying to access does not correspond with a long URL at this time!"
       );
   }
 });
