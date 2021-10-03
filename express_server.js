@@ -20,7 +20,7 @@ app.set("view engine", "ejs");
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// FUNCTIONS AND OBJECTS
 app.use(
   cookieSession({
     name: "session",
@@ -28,7 +28,7 @@ app.use(
     maxAge: 55 * 70 * 70 * 1000,
   })
 );
-
+// GET routes 
 app.get("/", (req, res) => {
   if (cookieHasUser(req.session.user_id, users)) {
     res.redirect("/urls");
@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
   }
 });
 
+// METHODS
+//get list of urls
 app.get("/urls", (req, res) => {
   let templateVars = {
     urls: urlsForUser(req.session.user_id, urlDatabase),
@@ -112,7 +114,8 @@ app.get("/u/:shortURL", (req, res) => {
       );
   }
 });
-
+// POST routes 
+//post to create new short url
 app.post("/urls", (req, res) => {
   if (req.session.user_id) {
     const shortURL = generateRandomString();
@@ -127,7 +130,7 @@ app.post("/urls", (req, res) => {
       .send("You must be logged in first!.");
   }
 });
-
+// A POST route for /register where email is added to database + encrypt cookies + hashing password
 app.post("/register", (req, res) => {
   const submittedEmail = req.body.email;
   const submittedPassword = req.body.password;
@@ -175,7 +178,7 @@ app.post("/logout", (req, res) => {
   req.session = null;
   res.redirect("/urls");
 });
-
+//Add a DELETE route that removes a URL resource: POST /urls/:id/delete
 app.post("/urls/:shortURL/delete", (req, res) => {
   const userID = req.session.user_id;
   const userUrls = urlsForUser(userID, urlDatabase);
@@ -189,7 +192,7 @@ app.post("/urls/:shortURL/delete", (req, res) => {
       .send("You do not have authorization!");
   }
 });
-
+//Display single url info
 app.post("/urls/:id", (req, res) => {
   const userID = req.session.user_id;
   const userUrls = urlsForUser(userID, urlDatabase);

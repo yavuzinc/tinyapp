@@ -1,3 +1,10 @@
+// Helper functions used in routes:
+// This function generates a random number to pick a character from char 6 times and then strings together the numbers to create a shortURL code
+// This function was used in the POST route for /urls to add a shortURL to the added longURL
+// This function was also used in the /register POST route to gengerate a random 6 digit ID for a new registered user
+
+
+
 const generateRandomString = function () {
   let randomString = "";
   for (let i = 0; i < 6; i++) {
